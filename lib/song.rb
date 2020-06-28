@@ -28,5 +28,6 @@ def self.create_by_name(song_name)
   song.name = song_name
   @@all << song
 end
+end
 
 #Song.new_by_name("Hello World")
