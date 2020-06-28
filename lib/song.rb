@@ -40,4 +40,3 @@ end
 def self.alphabetical()
   @@all.sort_by{|x|x.name}
 end
-
