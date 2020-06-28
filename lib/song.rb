@@ -29,6 +29,9 @@ def self.create_by_name(song_name)
   @@all << song
     song
 end
+
+def self.find_by_name(song_name)
+  @@all.find {|song| song.name == song_name}
 end
 
 #Song.new_by_name("Hello World")
