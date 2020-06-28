@@ -68,5 +68,7 @@ def self.create_from_filename(song_name)
   @@all << song
 end
 
+def.destroy_all
+  @@all = []
 end
 #Song.new_by_name("Hello World")
