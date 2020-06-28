@@ -43,11 +43,15 @@ def self.alphabetical
 end
 
 def self.new_from_filename(song_name)
-  myArray = song_name.split(" - ")
-  # myArray = ['Taylor Swift', 'Blank Space.mp3']
-  song.name = myArray[1].split(".mp3")[0]
   song = self.new
-  song.artist_name = myArray[0]
+  split_array = song_name.split(" - ")
+  # split_array = ['Taylor Swift', 'Blank Space.mp3']
+  song.artist_name = split_array[0]
+
+  second_split = split_array[1].split(".mp3")
+  # second_array = ['Blank Space']
+  song.name = second_split[0]
+
   song
 end
 end
