@@ -41,4 +41,5 @@ end
 def self.alphabetical
   @@all.sort_by { |song| song.name }
 end
+end
 #Song.new_by_name("Hello World")
