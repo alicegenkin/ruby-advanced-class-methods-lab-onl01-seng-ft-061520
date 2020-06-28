@@ -54,5 +54,19 @@ def self.new_from_filename(song_name)
 
   song
 end
+
+def self.create_from_filename(song_name)
+  song = self.new
+  split_array = song_name.split(" - ")
+  # split_array = ['Taylor Swift', 'Blank Space.mp3']
+  song.artist_name = split_array[0]
+
+  second_split = split_array[1].split(".mp3")
+  # second_array = ['Blank Space']
+  song.name = second_split[0]
+
+  @@all << song
+end
+
 end
 #Song.new_by_name("Hello World")
