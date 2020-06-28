@@ -41,5 +41,14 @@ end
 def self.alphabetical
   @@all.sort_by { |song| song.name }
 end
+
+def self.new_from_filename(song_name)
+  myArray = song_name.split(" - ")
+  # myArray = ['Taylor Swift', 'Blank Space.mp3']
+  song.name = myArray[1].split(".mp3")[0]
+  song = self.new
+  song.artist_name = myArray[0]
+  song
+end
 end
 #Song.new_by_name("Hello World")
